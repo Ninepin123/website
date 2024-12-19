@@ -1650,7 +1650,34 @@ section,
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
+:target::before {
+  content: '';
+  display: block;
+  height: 100px; /* Adjust this value to match your header height */
+  margin-top: -100px; /* Same value as height */
+}
+@font-face {
+  font-family: 'oxxo';
+  src:  url('fonts/xxxxx.eot') format('embedded-opentype'),
+    url('fonts/xxxxx.ttf') format('truetype'),
+    url('fonts/xxxxx.otf') format('opentype'),
+    url('fonts/xxxxx.woff') format('woff'),
+    url('fonts/xxxxx.svg#hello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.featurette-Chinese
+{
+  font-family: cursive;
+}
+.featurette-image {
+  cursor: pointer; /* Show a pointer cursor */
+  transition: transform 0.3s ease; /* Smooth animation */
+}
 
+.featurette-image:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
