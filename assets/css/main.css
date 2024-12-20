@@ -1678,6 +1678,39 @@ section,
 .featurette-image:hover {
   transform: scale(1.05); /* Slightly enlarge on hover */
 }
+/* Centering and styling the section */
+#prologueCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Center vertically */
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.6;
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+}
+
+/* Fade-in effect */
+.fade {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+/* Optional: Remove margin for the last paragraph */
+#prologueCol p:last-child {
+  margin-bottom: 0;
+}
+.responsive-image {
+  width: 100%; /* Makes the image scale based on the container */
+  max-width: 700px; /* Ensures the image doesn't grow too large */
+  height: auto; /* Maintains the aspect ratio */
+}
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
