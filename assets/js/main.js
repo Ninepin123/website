@@ -173,5 +173,13 @@
   
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
-  
+  document.addEventListener("DOMContentLoaded", () => {
+    const paragraphs = document.querySelectorAll("#prologueCol p");
+    paragraphs.forEach((paragraph, index) => {
+        setTimeout(() => {
+            paragraph.classList.add("fadeIn");
+        }, index * 500); // Stagger the fade effect by 500ms for each paragraph
+    });
+});
+
 })();
