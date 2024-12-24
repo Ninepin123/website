@@ -138,7 +138,9 @@
     </div>
 <main>
   <div class = "container text-center">
-    <h1><img src="assets/img/eldenRing/elden_logo.png" alt=""></h1>
+    <h1>
+      <img src="assets/img/eldenRing/elden_logo.png" alt="Elden Ring Logo" class="elden-logo">
+    </h1>
   </div>
   <section class="text-center">
     <div class="videoBox">
@@ -169,54 +171,56 @@
   </section>
   <div id = "myCarousel" class = "carousel slide" data-bs-ride="carousel">
     <!--輪播指示-->
-    <ol class = "carousel-indicators">
-      <li data-bs-target="myCarousel" data-bs-slide-to = "0" class = "active"></li>
-      <li data-bs-target="myCarousel" data-bs-slide-to = "1"></li>
-      <li data-bs-target="myCarousel" data-bs-slide-to = "2"></li>
-    </ol>
+    <div class = "carousel-indicators">
+      <button type = "button" data-bs-target="#myCarousel" data-bs-slide-to = "0" class = "active" aria-current="true" aria-label = "Slide1"></button>
+      <button type = "button" data-bs-target="#myCarousel" data-bs-slide-to = "1"  aria-label = "Slide2"></button>
+      <button type = "button" data-bs-target="#myCarousel" data-bs-slide-to = "2" aria-label = "Slide3"></button>
+    </div>
     <!--輪播內容-->
-    <div class = "carousel-inner">
-      <div class = "carousel-item active">
-        <img src="assets/img/eldenRing/multiplayer.png" class = "d-block-w-100" alt="">
-        <div class = "carousel-caption d-none d-md-block">
-          <h5>多人線上遊玩</h5>
+    <div class = "text-center carousel-fade">
+      <div class = "carousel-inner">
+        <div class = "carousel-item active">
+          <img src="assets/img/eldenRing/multiplayer.png" class = "d-block-w-100" alt="" width = "1000" height = "540">
+          <div class = "carousel-caption d-none d-md-block">
+            <h4>多人線上遊玩</h4>
+          </div>
         </div>
-      </div>
-      <div class = "carousel-item">
-        <img src="assets/img/eldenRing/world.png" class = "d-block-w-100" alt="">
-        <div class = "carousel-caption d-none d-md-block">
-          <h5>龐大的世界</h5>
+        <div class = "carousel-item">
+          <img src="assets/img/eldenRing/world.png" class = "d-block-w-100" alt="" width = "1000" height = "540">
+          <div class = "carousel-caption d-none d-md-block">
+            <h4>龐大的世界</h4>
+          </div>
         </div>
-      </div>
-      <div class = "carousel-item">
-        <img src="assets/img/eldenRing/equip.png" class = "d-block-w-100" alt="">
-        <div class = "carousel-caption d-none d-md-block">
-          <h5>多樣的裝備系統</h5>
+        <div class = "carousel-item">
+          <img src="assets/img/eldenRing/equip.png" class = "d-block-w-100" alt="" width = "1000" height = "540">
+          <div class = "carousel-caption d-none d-md-block">
+            <h4>多樣的裝備系統</h4>
+          </div>
         </div>
       </div>
     </div>
     <!--輪播控制-->
-    <a class = "carousel-control-prev" href="#myCarousel" data-bs-slide = "prev">
-      <span class = "carousel-control-prev-icon"></span>
+    <a class = "carousel-control-prev" href="#myCarousel" data-bs-slide = "prev" type = "button">
+      <img src="assets/img/eldenRing/arrow_left.png" alt="">
       <span class = "visually-hidden">Previous</span>
     </a>
-    <a class = "carousel-control-next-icon" href="#myCarousel" data-bs-slide = "next">
-      <span class = "carousel-control-next-icon"></span>
+    <a class = "carousel-control-next" href="#myCarousel" data-bs-slide = "next" type = "button">
+      <img src="assets/img/eldenRing/arrow_right.png" alt="">
       <span class = "visually-hidden">Next</span>
     </a>
   </div>
+  <h1><img src="assets/img/eldenRing/tit_spec.png" alt=""></h1>
   <div class="album py-5 bg-body-tertiary">
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <img class="bd-placeholder-img card-img-top" src="assets/img/eldenRing/godrick.jpg" alt="Thumbnail" width="100%" height="225">
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Godrick</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle = "modal" data-bs-target = "#myModal">View</button>
                 </div>
               </div>
             </div>
@@ -224,13 +228,12 @@
         </div>
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <img class="bd-placeholder-img card-img-top" src="assets/img/eldenRing/rennala.jpg" alt="Thumbnail" width="100%" height="225">
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Renalla</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
               </div>
             </div>
@@ -238,57 +241,12 @@
         </div>
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <img class="bd-placeholder-img card-img-top" src="assets/img/eldenRing/morgott.jpg" alt="Thumbnail" width="100%" height="225">
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Morgott</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
               </div>
             </div>
@@ -297,13 +255,12 @@
 
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <img class="bd-placeholder-img card-img-top" src="assets/img/eldenRing/radahn.jpg" alt="Thumbnail" width="100%" height="225">
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Radahn</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
               </div>
             </div>
@@ -311,13 +268,12 @@
         </div>
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <img class="bd-placeholder-img card-img-top" src="assets/img/eldenRing/rykard.jpg" alt="Thumbnail" width="100%" height="225">
+            <div class = "card-body">
+              <p class="card-text">Rykard</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
               </div>
             </div>
@@ -325,13 +281,39 @@
         </div>
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <img class="bd-placeholder-img card-img-top" src="assets/img/eldenRing/melania.jpg" alt="Thumbnail" width="100%" height="225">
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Melania</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" src="assets/img/eldenRing/mohg.jpg" alt="Thumbnail" width="100%" height="225">
+            <div class="card-body">
+              <p class="card-text">Mohg</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" src="assets/img/eldenRing/radagon.jpg" alt="Thumbnail" width="100%" height="225">
+            <div class="card-body">
+              <p class="card-text">Radagon</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                 </div>
               </div>
             </div>
@@ -340,7 +322,19 @@
       </div>
     </div>
   </div>
-
+  <div class = "modla fade" id = "myModal" tabindex = "-1">
+    <div class = "modal-dialog">
+      <div class = "modal-content">
+        <div class = "modal-header">
+          <h3 class = "modla-title"></h3>
+          <button type = "button" class = "btn-close" data-bs-dismiss = "modal"></button>
+          <div class = "modla-body text-center">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ijLhH7fdrRM?si=asExIHiKsytuq4xX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 
 <footer class="text-body-secondary py-5">
