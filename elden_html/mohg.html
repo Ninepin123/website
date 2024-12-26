@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>renalla</title>
+  </head>
+  <body>
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-sm-4">
+                <div class = "card">
+                    <img class="card-img-top" src = "mohg2.jpg">
+                    <div class = "card-body">
+                        <h5 class  ="card-title">蒙格_Mohg</h5>
+                        <p class = "card-text">我的米凱拉啊，
+                            請您稍等我一會兒。
+                            我不會再讓您…
+                            被任何一個人奪走！
+                            貴賓蒞臨了－
+                            來見證我們的美妙王朝！</p>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle = "modal" data-bs-target = "#myModal">View More</button>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-sm-2">
+                <ul class = "nav nav-pills flex-column" id = "myTab">
+                    <li class = "nav-item">
+                        <a class = "nav-link active nav-outline-secondary" data-bs-toggle = "pill" href="#tab1" >介紹</a>
+                        <a class = "nav-link  nav-outline-secondary" data-bs-toggle = "pill" href="#tab2" >追憶</a>
+                        <a class = "nav-link  nav-outline-secondary" data-bs-toggle = "pill" href="#tab3" >大魯恩</a>
+                    </li>
+                </ul>
+            </div>
+            <div class = "col-sm-6">
+                <div class = "tab-content" id = "myTabContent">
+                    <div class = "tab-pane fade show active" id = "tab1">
+                        <p>
+                            蒙格，一名惡兆之子，武器是一把碩大的三叉矛。其在碎片戰爭中臨危受命，把守著癲火地下墓地，防止有心人前來窺探三指，又或者癲火勢力自墓地中向外擴散。
+                        </p>
+                    </div>
+                    <div class = "tab-pane fade" id = "tab2">
+                        <img src="mohg_mem.png" width = "70%" height="70%">
+                    </div>
+                    <div class = "tab-pane fade" id = "tab3">
+                        <img src="mohg_big.jpg" width = "70%" height="70%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 觸發互動視窗的按鈕 -->
+    
+    <!-- 互動視窗 -->
+    <div class="modal fade" id="myModal" tabindex="-1">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">蒙格</h3>
+			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center">
+            <iframe width="1000" height="560" src="https://www.youtube.com/embed/mn6WK_-AhSc?si=9tiD8I6VspeHnoij" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    </body>
+</html>
