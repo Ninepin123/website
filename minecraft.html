@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft 堡壘攻城戰</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #1e1e2f;
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(120deg, #232526 0%, #414345 100%);
+            color: #f8f9fa;
+            padding-top: 56px; /* 預留空間給固定導航列 */
+        }
+        .hero {
+            background: url('hero-image.jpg') center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            background-blend-mode: overlay;
+        }
+        .hero h1 {
+            font-size: 3rem;
+        }
+        .jumbotron {
+            background: url('cw1.jpg') center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            border-radius: 0;
+        }
+        .jumbotron h1 {
+            font-size: 3rem;
+        }
+        .profession-card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.3s;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #fff4d6;
+            color: #333;
+        }
+        .profession-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .profession-card img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .profession-card .card-body {
+            flex: 1;
+        }
+        section {
+            background: rgba(30, 30, 47, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        a {
+            color: #66c7f4;
+        }
+        a:hover {
+            color: #88e1ff;
+        }
+    </style>
+</head>
+<body>
+    <!-- 導航列 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Minecraft 攻城戰</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#intro">遊戲介紹</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#professions">職業介紹</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resources">相關資源</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 輪播區域 -->
+    <section id="carousel" class="container py-5">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="minecraft/cw1.jpg" class="d-block w-100" alt="圖片1">
+                </div>
+                <div class="carousel-item">
+                    <img src="minecraft/cw2.jpg" class="d-block w-100" alt="圖片2">
+                </div>
+                <div class="carousel-item">
+                    <img src="minecraft/cw3.jpg" class="d-block w-100" alt="圖片3">
+                </div>
+                <div class="carousel-item">
+                    <img src="minecraft/cw4.jpg" class="d-block w-100" alt="圖片4">
+                </div>
+                <div class="carousel-item">
+                    <img src="minecraft/cw5.jpg" class="d-block w-100" alt="圖片5">
+                </div>
+                <div class="carousel-item">
+                    <img src="minecraft/cw6.jpg" class="d-block w-100" alt="圖片6">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- 遊戲簡介 -->
+    <section id="intro" class="container py-5">
+        <h2 class="text-center mb-4">遊戲簡介</h2>
+        <p style="font-size: 1.5em; font-weight: bold;">
+  堡壘攻城戰是一款結合 PVP 的 5v5 競技遊戲，玩家可根據任務分配自行選擇不同有利的職業，位置上大致可分為進攻、防守、游擊、家礦以及中央礦洞，其中中央礦洞的搶奪為經濟的主要關鍵。除此之外，家裡商人的運用、中央商人的特殊道具都有可能成為逆轉戰局的關鍵。
+</p>
+
+    </section>
+
+    <!-- 職業介紹 -->
+    <section id="professions" class="container py-5">
+        <h2 class="text-center mb-4">職業介紹</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="profession-card">
+                    <img src="minecraft/101.jpg" alt="躍空騎士">
+                    <div class="card-body">
+                        <h5 class="card-title">躍空騎士</h5>
+                        <p class="card-text">具有所有職業最高的輸出傷害，以及跳躍效果，使其可以靈活地穿梭在場上的各個位置</p>
+<pre><ul><li>攻擊力  :極高</li><li>防禦力  :低</li><li>適合位置:進攻、游擊</li></ul></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="profession-card">
+                    <img src="minecraft/102.jpg" alt="鑽石戰士">
+                    <div class="card-body">
+                        <h5 class="card-title">鑽石戰士</h5>
+                        <p class="card-text">具有全場最高防禦力，能長期扛下大量傷害，適合戰鬥以及長時間拖延對手</p><pre><ul><li>攻擊力  :低</li><li>防禦力  :極高</li><li>適合位置:中央礦洞</li></ul></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="profession-card">
+                    <img src="minecraft/103.jpg" alt="刺客">
+                    <div class="card-body">
+                        <h5 class="card-title">刺客</h5>
+                        <p class="card-text">具有隱身能力以及背刺效果，適合悄無聲息地穿過對手防線進攻核心，是非常具備騷擾能力的角色</p><pre><ul><li>攻擊力  :極高</li><li>防禦力  :極低</li><li>適合位置:進攻</li></ul></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="profession-card">
+                    <img src="minecraft/104.jpg" alt="靈能使者">
+                    <div class="card-body">
+                        <h5 class="card-title">靈能使者</h5>
+                        <p class="card-text">擁有力量、速度、抗性、抗火等等特殊效果，適合在場上輔助隊友。</p><pre><ul><li>攻擊力  :高</li><li>防禦力  :低</li><li>適合位置:進攻、游擊、防守</li></ul></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="profession-card">
+                    <img src="minecraft/105.jpg" alt="遊俠">
+                    <div class="card-body">
+                        <h5 class="card-title">遊俠</h5>
+                        <p class="card-text">具有擊退劍以及強大的遠程武器，並具有燃燒、強力、擊退效果，適合防禦核心以及在團戰中掩護隊友</p><pre><ul><li>攻擊力  :極低</li><li>防禦力  :極低</li><li>適合位置:防守、游擊</li></ul></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="profession-card">
+                    <img src="minecraft/106.jpg" alt="建築師">
+                    <div class="card-body">
+                        <h5 class="card-title">建築師</h5>
+                        <p class="card-text">具有大量方塊以及鑽石槁，適合用於蓋天橋輔助進攻或建築對於防守方有利的地形</p><pre><ul><li>攻擊力  :中等</li><li>防禦力  :高</li><li>適合位置:游擊、中央礦洞、防守</li></ul></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="profession-card">
+                    <img src="minecraft/107.jpg" alt="海王">
+                    <div class="card-body">
+                        <h5 class="card-title">海王</h5>
+                        <p class="card-text">三叉戟作為主要攻擊武器，具有拉人以及遠程能力，亦有海靈核心可回復隊友，適合團戰以及長期的拉鋸戰</p><pre><ul><li>攻擊力  :低</li><li>防禦力  :高</li><li>適合位置:進攻、中央礦洞</li></ul></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 參考資源網站 -->
+    <section id="resources" class="container py-5">
+        <h2 class="text-center mb-4">參考資源網站</h2>
+        <ul>
+<li>
+  <iframe 
+    width="100%" 
+    height="600" 
+    src="https://www.youtube.com/embed/m87X6zBQv80" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</li>
+
+            <li><a href="https://discord.castlewars.net/"_blank">堡壘攻城戰discord</a></li>
+           
+        </ul>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
