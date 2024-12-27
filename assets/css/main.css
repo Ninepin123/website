@@ -1711,6 +1711,34 @@ section,
   max-width: 700px; /* Ensures the image doesn't grow too large */
   height: auto; /* Maintains the aspect ratio */
 }
+h1 img {
+  max-width: 100%; /* Ensures the image scales down to fit its container */
+  height: auto;    /* Maintains the aspect ratio */
+  display: block;  /* Removes default inline spacing */
+  margin: 0 auto;  /* Centers the image horizontally, optional */
+}
+.videoBox {
+  position: relative;
+  width: 100%; /* Makes the container take the full width of its parent */
+  max-width: 1600px; /* Optional: Set a max width to limit the size */
+  margin: 0 auto; /* Center the container */
+  padding-bottom:50%; /* Aspect ratio (16:9 is 56.25%) */
+  height: 50%; /* Set height to 0, so padding creates the aspect ratio */
+}
+
+.videoBox iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.d-block.w-100 {
+  max-width: 1000px; /* Limit the maximum width of the image */
+  width: 100%; /* Allow it to shrink to fit smaller containers */
+  height: auto; /* Maintain the aspect ratio */
+  margin: 0 auto; /* Center the image horizontally */
+}
 
 /*--------------------------------------------------------------
 # Starter Section Section
