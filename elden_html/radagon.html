@@ -6,6 +6,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <title>renalla</title>
+    <link href = "elden.css" ref = "stylesheet">
   </head>
   <body>
     <div class = "container">
@@ -53,17 +54,21 @@
             <div class = "col-sm-2">
                 <ul class = "nav nav-pills flex-column" id = "myTab">
                     <li class = "nav-item">
-                        <a class = "nav-link active nav-outline-secondary" data-bs-toggle = "pill" href="#tab1" >介紹</a>
+                        <a class = "nav-link active nav-outline-secondary" data-bs-toggle = "pill" href="#tab2" >介紹</a>
+                        <a class = "nav-link nav-outline-secondary" data-bs-toggle = "pill" href="#tab3" >追憶</a>
                     </li>
                 </ul>
             </div>
             <div class = "col-sm-6">
                 <div class = "tab-content" id = "myTabContent">
-                    <div class = "tab-pane fade show active" id = "tab1">
+                    <div class = "tab-pane fade show active" id = "tab2">
                         <p>
                             艾爾登之獸，是From Software開發的角色扮演遊戲《艾爾登法環》中的主線最終BOSS。
 在擊敗拉達岡後，自其倒下軀體滲出的黑色濃霧中現身的超常存在。為隸屬無上意志的獸物，過去墜落於交界地的流星，化成瞭如今的艾爾登法環。
                         </p>
+                    </div>
+                    <div class = "tab-pane fade text-center" id = "tab3">
+                        <img src="jelly_mem.jpg" width = "70%" height="70%">
                     </div>
                 </div>
             </div>
@@ -73,15 +78,14 @@
     
     <!-- 互動視窗 -->
     <div class="modal fade" id="myModal" tabindex="-1">
-      <div class="modal-dialog modal-xl">
+      <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
           <div class="modal-header">
             <h3 class="modal-title">拉達岡&艾爾登之獸</h3>
 			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
           <div class="modal-body text-center">
-            <iframe width="1000" height="560" src="https://www.youtube.com/embed/mn6WK_-AhSc?si=9tiD8I6VspeHnoij" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
+            <iframe style="width: 100%; height: 80vh;" src="https://www.youtube.com/embed/h4IWlJiuaEc?si=KWtKj0OiJqrwqZHL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           <div class="modal-footer">
           </div>
         </div>

@@ -1,0 +1,15 @@
+.modal-dialog {
+    max-width: 90%; /* Adjust the modal width (e.g., 90% of the screen width) */
+    width: 100%; /* Ensure the modal scales responsively */
+    max-height: 90vh; /* Adjust the modal height (e.g., 90% of the viewport height) */
+    margin: 0 auto; /* Center the modal on the screen */
+}
+
+.modal-content {
+    height: auto; /* Allow the modal content to expand naturally */
+    width: 100%; /* Make the modal content fill its container */
+}
+
+.modal-body {
+    padding: 20px; /* Adjust padding as needed */
+}
